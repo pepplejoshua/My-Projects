@@ -1,0 +1,54 @@
+This is my interpreter for a subset of Racket functionality using the Racket language.
+Note: This can definitely be implemented cleaner and free of clutter, let should be defined differently from letrec.
+
+-------------
+**Functions**
+-------------
+startEval: main function and entry point of interpreter
+Inputs: program (user input)
+
+Reader: main parser which routes the path of the program and handles the special constructs
+Inputs: program
+
+executeFunction: this function executes lambda or user defined functions
+Inputs: program value
+
+addBinding: this helps compFunctionBindings compute, store and return bindings
+Inputs: binding_name binding_value storage_stack
+
+compFunctionBindings: this computes the variable-value bindings for the execution of a function about to occur (user defined function or lambda)
+Inputs:  binding_name binding_value storage_stack
+
+compute-bindings: used by let and letrec to compute identifier and value bindings for the execution of the code in the body. items is a list of both identifiers and their values.
+Inputs: items
+
+createFunction: this creates a lambda function binding and returns it
+Inputs: parameters body
+
+
+parser: this is the secondary parser which reads the program list and solves it either directly by calling the primitives function or by passing it onto reader or self-eval.
+Inputs: program
+
+self-eval: this function helps with finding the simplest form of the item passed to it. It helps with functions, variables, numbers, complex items
+Inputs: item
+
+Found?: this checks if an item stored in word exists in a storage (keywords) list (for variable type bindings)
+Inputs: word keywords
+
+foundFunc?: this checks if a function id stored in word exists in a function storage (keywords) list (for function type bindings)
+Inputs: word keywords
+
+callFunction: this function calls and returns the evaluated value of the primitive functions with their values.
+Inputs: oprtr op1 op2 op3
+
+Retrieve: this retrieves the value of a binding stored in a storage list identified by item
+Inputs: item storage
+
+createBinding: this creates bindings in specific storage lists based on the value of the key variable. The key determines what storage stack the binding goes to.
+Inputs: binding_name binding_value key
+
+Declared?: this checks if an item is declared in a storage list
+Inputs: item storage
+
+removeBinding: this checks if an item is in a storage list and removes it by returning all of the items excluding that item
+Inputs: item storage
