@@ -1,0 +1,6 @@
+This folder contains my implementation of a Balanced ternary class.
+
+Example of use:
+Consider the ternary number (-11011)3. Its value in decimal system is computed by multiplying each ternary digit by its positional value and summing them
+(-1) × 3^4 + 1 × 3^3 + 0 × 3^2 + 1 × 3^1 + 1 × 3^0 = (−50)10
+
