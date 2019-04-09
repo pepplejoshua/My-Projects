@@ -1,0 +1,21 @@
+This is my C++ implementation of Reverse Polish Notation
+
+An expression in RPN is a sequence of operands (integers in this
+case) and operators such as:
+2 1 2 + 3 4 + * - .
+
+The expression is read from left to right. When an operand is seen, the operand is
+pushed onto the stack. If a binary operator is seen, the top 2 operands are removed
+from the stack and the operator is applied to them (second topmost element is the
+first operand). The result of the operation is then pushed onto the stack. The stack
+is empty at the beginning of the expression. The end of the expression is indicated by
+a period. At the end, there should be exactly one element on the stack which is the
+result of the expression.
+In the example above, the stack contents (top = right) before and after the application
+of each operator are:
+
+2, 1, 2 + → 2, 3
+2, 3, 3, 4 + → 2, 3, 7
+2, 3, 7 ∗ → 2, 21
+2, 21 − → −19
+Therefore, the final value of the expression is −19.
