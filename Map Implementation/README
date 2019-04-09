@@ -1,0 +1,2 @@
+This is my implementation of the STL Map class based on specifications using Binary Search Tree for storage. This is a template class.
+Since I use Xcode, I didn't have to call the destructor for the BST directly. In any case where you need to, uncomment the lines in the destructor of the Map class.
