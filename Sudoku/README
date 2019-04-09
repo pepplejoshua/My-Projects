@@ -1,0 +1,2 @@
+This is a C++ implementation for recursively solving a Sudoku grid. The header and implementation files (sudokuGrid.*), and the Makefile are provided by my professor.
+The task was to implement the solve function in sudoku.cc that stitched all solving operations together. This was definitely my first satisfying Programming problem to solve.
