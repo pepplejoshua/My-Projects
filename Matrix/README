@@ -1,0 +1,3 @@
+Uncomment destructor line to use deallocator. This solution required memory leaks (yes, yes it did).
+This is my implementation of a simple Matrix class.
+Can be added, subtracted, multiplied. Will included Makefile if necessary.
