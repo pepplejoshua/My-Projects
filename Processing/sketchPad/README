@@ -1,0 +1,2 @@
+This contains an implementation of a simple drawing canvas that has only one drawing tool: a stroke. The user can toggle between drawing strokes and not drawing by simply clicking in the canvas area. The stroke weight is increased or decreased by using the up and down arrow key. The stroke colour is changed when the user clicks on a colour palette box containing a colour.  Resetting to initial default stroke colour can be done by pressing key 's' or 'S'. To reset the entire canvas area for a fresh space, press 'r' or 'R'.
+A Dollarama-Paint with one tool if you will.
